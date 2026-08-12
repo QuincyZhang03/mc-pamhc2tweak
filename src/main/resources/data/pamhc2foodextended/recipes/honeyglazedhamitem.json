@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "harvestcraft:honeyglazedhamitem"
+  },
+
+  "ingredients": [
+    {
+      "tag": "forge:tool_saucepan"
+    },
+    {
+      "tag": "forge:rawpork"
+    },
+    {
+      "tag": "forge:honey"
+    },
+    {
+      "tag": "forge:blackpepper"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}
