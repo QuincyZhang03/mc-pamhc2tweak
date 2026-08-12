@@ -152,7 +152,6 @@ dependencies {
 mixin {
     // refmap文件名，格式 mixins.<modid>.refmap.json
     add sourceSets.main, 'mixins.pamhc2tweak.refmap.json'
-    // 指定mixin配置json文件名
     config 'pamhc2tweak.mixins.json'
 
     // 调试用，开发环境建议打开，方便看mixin报错
