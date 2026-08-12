@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	
+	"ingredients":
+	[
+    {
+      "tag": "forge:tool_grinder"
+    },
+    {
+      "item": "pamhc2trees:roastedcashewitem"
+    }
+
+
+	],
+	
+	"result": {"item": "pamhc2foodextended:cashewbutteritem",
+	"count": 1}
+	
+}

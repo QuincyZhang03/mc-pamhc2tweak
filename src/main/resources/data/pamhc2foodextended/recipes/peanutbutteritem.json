@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	
+	"ingredients":
+	[
+    {
+      "tag": "forge:tool_grinder"
+    },
+    {
+      "item": "pamhc2crops:roastedpeanutitem"
+    }
+
+
+	],
+	
+	"result": {"item": "pamhc2foodextended:peanutbutteritem",
+	"count": 1}
+	
+}

@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	
+	"ingredients":
+	[
+    {
+      "tag": "forge:tool_grinder"
+    },
+    {
+      "item": "pamhc2trees:roastedchestnutitem"
+    }
+
+
+	],
+	
+	"result": {"item": "pamhc2foodextended:chestnutbutteritem",
+	"count": 1}
+	
+}
