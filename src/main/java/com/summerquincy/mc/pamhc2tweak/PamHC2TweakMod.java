@@ -15,13 +15,11 @@ import org.slf4j.Logger;
 public class PamHC2TweakMod {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "pamhc2tweak";
-    // Directly reference a slf4j logger
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-
     @SuppressWarnings("unused")
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public PamHC2TweakMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();

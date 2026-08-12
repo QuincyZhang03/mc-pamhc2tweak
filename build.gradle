@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = mod_version
@@ -130,6 +131,8 @@ dependencies {
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
@@ -144,6 +147,18 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+}
+
+mixin {
+    // refmap文件名，格式 mixins.<modid>.refmap.json
+    add sourceSets.main, 'mixins.pamhc2tweak.refmap.json'
+    // 指定mixin配置json文件名
+    config 'pamhc2tweak.mixins.json'
+
+    // 调试用，开发环境建议打开，方便看mixin报错
+    debug.verbose = true
+    debug.export = true
+    dumpTargetOnFailure = true
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
