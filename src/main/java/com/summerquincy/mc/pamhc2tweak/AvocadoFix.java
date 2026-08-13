@@ -4,9 +4,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -14,16 +16,17 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.Objects;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class AvacadoFix {
-    public static RegistryObject<Item> PAMAVOCADO =
+public class AvocadoFix {
+
+    public static RegistryObject<Item> PAMAVOCADO = ModList.get().isLoaded("pamhc2trees") ?
             PamHC2TweakMod.ITEMS.register("pamavocado", () -> {
-                        Block avocadoBlock = ForgeRegistries.BLOCKS.getValue(ResourceLocation.fromNamespaceAndPath("pamhc2trees", "pamavocado"));
-                        if (avocadoBlock != null) {
-                            return new BlockItem(avocadoBlock, new Item.Properties());
-                        }
-                        return null;
-                    }
-            );
+                Block avocadoBlock = ForgeRegistries.BLOCKS.getValue(ResourceLocation.fromNamespaceAndPath("pamhc2trees", "pamavocado"));
+                if (avocadoBlock != null) {
+                    return new BlockItem(avocadoBlock, new Item.Properties());
+                }
+                return Items.AIR;
+            })
+            : null;
 
 
     @SubscribeEvent
