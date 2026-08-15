@@ -18,9 +18,9 @@ import java.util.Objects;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AvocadoFix {
 
-    public static RegistryObject<Item> PAMAVOCADO = ModList.get().isLoaded("pamhc2trees") ?
+    public static RegistryObject<Item> PAMAVOCADO = ModList.get().isLoaded(PamHC2TweakMod.ROOT_ID_TREES) ?
             PamHC2TweakMod.ITEMS.register("pamavocado", () -> {
-                Block avocadoBlock = ForgeRegistries.BLOCKS.getValue(ResourceLocation.fromNamespaceAndPath("pamhc2trees", "pamavocado"));
+                Block avocadoBlock = ForgeRegistries.BLOCKS.getValue(ResourceLocation.fromNamespaceAndPath(PamHC2TweakMod.ROOT_ID_TREES, "pamavocado"));
                 if (avocadoBlock != null) {
                     return new BlockItem(avocadoBlock, new Item.Properties());
                 }
@@ -31,7 +31,7 @@ public class AvocadoFix {
 
     @SubscribeEvent
     public static void addToCreativeTab(BuildCreativeModeTabContentsEvent e) {
-        if (Objects.equals(BuiltInRegistries.CREATIVE_MODE_TAB.getKey(e.getTab()), ResourceLocation.fromNamespaceAndPath("pamhc2trees", "trees_tab")) && PAMAVOCADO != null) {
+        if (Objects.equals(BuiltInRegistries.CREATIVE_MODE_TAB.getKey(e.getTab()), ResourceLocation.fromNamespaceAndPath(PamHC2TweakMod.ROOT_ID_TREES, "trees_tab")) && PAMAVOCADO != null) {
             e.accept(PAMAVOCADO);
         }
     }

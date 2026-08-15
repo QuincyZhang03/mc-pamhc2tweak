@@ -15,7 +15,9 @@ public class PamHC2TweakMod {
     public static final String MODID = "pamhc2tweak";
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final DeferredRegister<Item> APPEND_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "pamhc2foodcore");
+    public static final String ROOT_ID_FOODCORE = "pamhc2foodcore";
+    public static final String ROOT_ID_TREES = "pamhc2trees";
+    public static final DeferredRegister<Item> APPEND_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ROOT_ID_FOODCORE);
     @SuppressWarnings("unused")
     public static final Logger LOGGER = LogUtils.getLogger();
 
