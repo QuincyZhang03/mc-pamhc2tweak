@@ -1,0 +1,21 @@
+{
+  "result": {
+    "id": "pamhc2foodextended:honeyglazedhamitem"
+  },
+
+  "ingredients": [
+    {
+      "tag": "c:tool_saucepan"
+    },
+    {
+      "tag": "c:rawpork"
+    },
+    {
+      "tag": "c:honey"
+    },
+    {
+      "tag": "c:blackpepper"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

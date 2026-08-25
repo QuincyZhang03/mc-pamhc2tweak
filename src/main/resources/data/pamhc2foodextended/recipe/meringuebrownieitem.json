@@ -1,0 +1,27 @@
+{
+  "result": {
+    "id": "pamhc2foodextended:meringuebrownieitem"
+  },
+
+  "ingredients": [
+    {
+      "tag": "c:tool_bakeware"
+    },
+{
+      "tag": "c:meringue"
+    },
+{
+      "tag": "c:cocoapowder"
+    },
+{
+      "tag": "c:flour"
+    },
+{
+     "tag": "c:sugar"
+    },
+{
+      "tag": "c:milk"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

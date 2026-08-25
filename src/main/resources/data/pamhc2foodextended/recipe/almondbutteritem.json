@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:tool_grinder"
+    },
+    {
+      "item": "pamhc2trees:roastedalmonditem"
+    }
+  ],
+  "result": {
+    "id": "pamhc2foodextended:almondbutteritem",
+    "count": 1
+  }
+}
